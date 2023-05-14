@@ -27,10 +27,16 @@ public class InterfaceCreator {
 
     public Consumer<List<Integer>> addEvenValuesAtTheEnd() {
         return x ->{
+            List<Integer> nw = new ArrayList<>();
             for (Integer a: x) {
                 if (a % 2 == 0) {
-                    x.add(a);
+                    nw.add(a);
+
                 }
+
+            }
+            for (Integer a: nw) {
+                x.add(a);
             }
 
         };
